@@ -5,6 +5,7 @@ import java.util.Date;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -15,7 +16,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Orderpet {
 	
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy= GenerationType.AUTO)
 	private int id;
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss")
@@ -37,18 +38,34 @@ public class Orderpet {
 		this.id = id;
 	}
 
-
-
-	public Orderpet() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public Date getCreated() {
 		return created;
 	}
 
 	public void setCreated(Date created) {
 		this.created = created;
+	}
+
+	public PetDTO getPet() {
+		return pet;
+	}
+
+	public void setPet(PetDTO pet) {
+		this.pet = pet;
+	}
+
+	public UserDTO getUser() {
+		return user;
+	}
+
+	public void setUser(UserDTO user) {
+		this.user = user;
+	}
+	
+
+
+	public Orderpet() {
+		// TODO Auto-generated constructor stub
 	}
 
 }

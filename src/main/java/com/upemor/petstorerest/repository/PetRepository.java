@@ -10,4 +10,6 @@ public interface PetRepository extends JpaRepository<PetDTO, Integer>{
 	
 	PetDTO findById(int id);
 	
+	PetDTO findByName(String name);
+	
 }

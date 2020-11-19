@@ -79,11 +79,25 @@ public class PetDTO {
 		this.price = price;
 	}
 
+	public CategoryDTO getCategoryDTO() {
+		return categoryDTO;
+	}
+
+	public void setCategoryDTO(CategoryDTO categoryDTO) {
+		this.categoryDTO = categoryDTO;
+	}
+
+	public TagDTO getTagDTO() {
+		return tagDTO;
+	}
+
+	public void setTagDTO(TagDTO tagDTO) {
+		this.tagDTO = tagDTO;
+	}
+	
 	public PetDTO() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	
 	
 	
 	
